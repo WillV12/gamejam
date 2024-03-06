@@ -5,7 +5,7 @@ respect_level= 50
 
 def main(day):
     for days in range(1,6):
-      main(days
+      main(days)
 
 
 def bitcoin():
@@ -47,8 +47,7 @@ def wiped_hard_drives():
 issues = [software_unaccess(), slow_wifi(), servers_down(), online_textbook(), wiped_hard_drives()]
 
 def server():
-    if day == 1:
         print("You have entered the server room.")
-        print ("1. Check traffic")
+        print("1. Check traffic")
         print("2. Unplug some wires")
         print("3. Check Traffic")
