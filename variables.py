@@ -3,9 +3,9 @@ respect_level= 50
 # server
 
 
-
-for days in range(1,6):
-      pass
+def main(day):
+    for days in range(1,6):
+      main(days
 
 
 def bitcoin():
@@ -16,11 +16,11 @@ def roblox():
     pass
 def food():
     pass
-def spill_coffee():
+def spill_coffee(respect):
+    print("")
+def burn(respect):
     pass
-def burn():
-    pass
-def upgrade():
+def upgrade(respect):
     pass
 def admin_access():
     pass
@@ -29,9 +29,9 @@ def office_ransack():
 def lanschool():
     pass
 
-office = [admin_access(), office_ransack(), lanschool()]
-room_251 = [chatgpt(), roblox(), food(), bitcoin()]
-server = [spill_coffee(), burn(), upgrade() ]
+office_issues = [admin_access(), office_ransack(), lanschool()]
+room_251_issues = [chatgpt(), roblox(), food(), bitcoin()]
+server_issues = [spill_coffee(respect_level), burn(respect_level), upgrade(respect_level) ]
 
 def software_unaccess():
     pass
@@ -46,8 +46,9 @@ def wiped_hard_drives():
 
 issues = [software_unaccess(), slow_wifi(), servers_down(), online_textbook(), wiped_hard_drives()]
 
-
-
-
-
-
+def server():
+    if day == 1:
+        print("You have entered the server room.")
+        print ("1. Check traffic")
+        print("2. Unplug some wires")
+        print("3. Check Traffic")
