@@ -1,37 +1,37 @@
-respect_level= 50
+respect_level = 50
 # below 30, above 70, danger zone
 # server
 
 
 
-for days in range(1,6):
-      pass
 
 
-def bitcoin():
+
+def bitcoin(): # Dillion
     pass
-def chatgpt():
+def chatgpt(): # Dillion
     pass
-def roblox():
+def roblox(): # Dillion
     pass
-def food():
+def food(): # Dillion
     pass
-def spill_coffee():
+def spill_coffee(): # Carol
     pass
-def burn():
+def burn(): # Carol
     pass
-def upgrade():
+def upgrade(): # Carol
     pass
-def admin_access():
+def admin_access(respect): # Will
+    print("")
+
+def office_ransack(): # Will
     pass
-def office_ransack():
-    pass
-def lanschool():
+def lanschool(): # Will
     pass
 
 office = [admin_access(), office_ransack(), lanschool()]
 room_251 = [chatgpt(), roblox(), food(), bitcoin()]
-server = [spill_coffee(), burn(), upgrade() ]
+server = [spill_coffee(), burn(), upgrade()]
 
 def software_unaccess():
     pass
