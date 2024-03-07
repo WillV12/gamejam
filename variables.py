@@ -1,6 +1,7 @@
 # below 30, above 70, danger zone
 # server
 import random
+import Room_251
 respect_level = 0
 status_level = 0
 
@@ -13,7 +14,13 @@ def rand_choice(lower, upper, chance):
 
 
 def bitcoin(respect, status): # Dillion
-    pass
+    new_statuses = Room_251.room_251(50, 50, event)
+    print("Status:", new_statuses[0])
+    print("Respect:", new_statuses[1])
+    print("Inventory:", inventory)
+    status = new_statuses[0]
+    respect = new_statuses[1]
+    new_statuses.clear()
 def chatgpt(respect, status): # Dillion
     pass
 def roblox(respect, status): # Dillion
