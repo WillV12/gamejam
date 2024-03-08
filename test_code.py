@@ -5,7 +5,7 @@
 #           "")
 #
 # spill_coffee(respect_level)
-import variables
+#import variables
 import random
 # def wire_unplug_challenge():
 #     tries = 0
@@ -20,31 +20,33 @@ import random
 #         wires.remove(wire)
 #
 #         tries +=1
-
-options = [1, 2, 3]
-print("You have entered the server room."
-      "\n1. Check traffic"
-      "\n2. Unplug some wires"
-      "\n3. Look around")
-choice = int(input("Option: "))
-while choice not in options :
-    print("Make sure it is just the number of one of the options above.")
+def server():
+    options = [1, 2, 3]
+    print("You have entered the server room."
+          "\n1. Check traffic"
+          "\n2. Unplug some wires"
+          "\n3. Look around")
     choice = int(input("Option: "))
-while choice not in options or choice != 3:
-    if choice == 1:
-        print("Checking Traffic ....."
-              "\nThere is no traffic at all. The servers are down."
-              "\nMaybe look at something else.")
-        #options.remove(choice)
+    while choice not in options :
+        print("Make sure it is just the number of one of the options above.")
         choice = int(input("Option: "))
-    elif choice == 2:
-        #wire_unplug_challenge()
-        print("")
-        choice = int(input("Option: "))
-    elif choice == 3:
-        print ("OhNo! You might have found the issue.")
-        spill_coffee()
-        burn()
-        upgrade()
-    else:
-        choice = int(input("Option: "))
+    while choice not in options or choice != 3:
+        if choice == 1:
+            print("Checking Traffic ....."
+                  "\nThere is no traffic at all. The servers are down."
+                  "\nMaybe look at something else.")
+            #options.remove(choice)
+            choice = int(input("Option: "))
+        elif choice == 2:
+            #wire_unplug_challenge()
+            print("")
+            choice = int(input("Option: "))
+        elif choice == 3:
+            print ("OhNo! You might have found the issue.")
+            spill_coffee()
+            burn()
+            upgrade()
+        else:
+            choice = int(input("Option: "))
+
+server()

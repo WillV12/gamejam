@@ -1,5 +1,7 @@
 import variables
 inventory = []
+respect_level = 50
+status_level = 50
 name = input("What is your name?:\n")
 
 print(f"Hello {name}, you will be in the role of Clint Matthews, the IT admin of Wake Tech, for the upcoming week."
@@ -18,7 +20,7 @@ print ("It is Monday, students are unhappy because they are back to school. "
        "\nYou need to make sure all the computers have Wireshark installed as fast as possible because students are waiting in class. ")
 print ("")
 input("Press any key to continue")
-#room_251()
+vaiable.software_unaccess(respect_level, status_level)
 for line in range (4):
       print ("")
 

@@ -84,24 +84,24 @@ def wiped_hard_drives():
 
 issues = [software_unaccess(), slow_wifi(), servers_down(), online_textbook(), wiped_hard_drives()]
 
-def server():
-        choices = [1,2,3]
-        print("You have entered the server room."
-              "\n1. Check traffic"
-              "\n2. Unplug some wires"
-              "\n3. Look around")
-        choice = int(input("Option: "))
-        while choice not in choices and choice != 3:
-            print ("Make sure it is just the number of one of the options above.")
-            choice = int(input("Option: "))
-        if choice == 1:
-            print("Checking Traffic ....."
-                  "\nThere is no traffic at all. The servers are down."
-                  "\nMaybe look at something else.")
-
-        elif choice == 2:
-            pass
-        elif choice ==3:
-            pass
-        #print ("You have found the flashdrive with the server's upgrade.")
-        #inventory.apppend("Server Update Flashdrive")
+# def server():
+#         choices = [1,2,3]
+#         print("You have entered the server room."
+#               "\n1. Check traffic"
+#               "\n2. Unplug some wires"
+#               "\n3. Look around")
+#         choice = int(input("Option: "))
+#         while choice not in choices and choice != 3:
+#             print ("Make sure it is just the number of one of the options above.")
+#             choice = int(input("Option: "))
+#         if choice == 1:
+#             print("Checking Traffic ....."
+#                   "\nThere is no traffic at all. The servers are down."
+#                   "\nMaybe look at something else.")
+#
+#         elif choice == 2:
+#             pass
+#         elif choice ==3:
+#             pass
+#         #print ("You have found the flashdrive with the server's upgrade.")
+#         #inventory.apppend("Server Update Flashdrive")
