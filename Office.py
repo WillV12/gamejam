@@ -34,6 +34,8 @@ def office():
                     break
                 elif teams_choice == "1":
                     variables.talk_mccuen()
+        elif choice == "2":
+            variables.monitor_computers()
         if choice_correct is True:
             break
     return choice

@@ -23,7 +23,7 @@ def room_251(status, respect, event):
     staring_competition = ""
 
     # status determines McCuen's joy to see you for talking...
-    if 31 < status < 70:
+    if 31 < status[0] < 70:
         if event == "talk":
             while True:
                 ascii.mccuen("neutral")
@@ -63,7 +63,7 @@ def room_251(status, respect, event):
                                     elif x == 2 and staring_competition == "1":
                                         ascii.mccuen("instinct")
                                         print("I always win staring contests...\n(status-20) (respect -25)\n")
-                                        statuses = [status - 20, respect - 25]
+                                        statuses = [status[0] - 20, respect[0] - 25]
                                         break
                                     x += 1
                         elif choice1 == "1":
@@ -100,7 +100,7 @@ def room_251(status, respect, event):
                         break
         else:
             ascii.mccuen("neutral")
-    elif -1 < status < 31:
+    elif -1 < status[0] < 31:
         if event == "talk":
             while True:
                 ascii.mccuen("angry")
@@ -167,7 +167,7 @@ def room_251(status, respect, event):
                         input("Press enter to continue...")
         else:
             ascii.mccuen("angry")
-    elif 69 < status < 101:
+    elif 69 < status[0] < 101:
         if event == "talk":
             while True:
                 ascii.mccuen("happy")
@@ -233,18 +233,18 @@ def room_251(status, respect, event):
             choice = input("\n")
         if choice == "1":
             print("\nYou sent the student to the office...\n(status +5) (respect -5)")
-            statuses = [status+5, respect-5]
+            statuses = [status[0]+5, respect[0]-5]
         elif choice == "2":
             print("\nYou ignored it!!!\n(status -20) (respect +15)")
-            statuses = [status-15, respect+15]
+            statuses = [status[0]-15, respect[0]+15]
         elif choice == "3":
             print("\nYou wiped the computers!!!\n(status -15) (respect -20)")
-            statuses = [status-15, respect-20]
+            statuses = [status[0]-15, respect[0]-20]
         elif choice == "4":
             ascii.mccuen("instinct")
             print("You did not win...\nWhat were you thinking...")
             print("(status -25)\n(respect - 25)")
-            statuses = [status-25, respect-25]
+            statuses = [status[0]-25, respect[0]-25]
         input("\npress enter to continue...\n")
     elif event == "chat gpt":
         print("The Students have been using ChatGPT to cheat in class!\n What do you do?")
@@ -265,18 +265,18 @@ def room_251(status, respect, event):
             choice = input("\n")
         if choice == "1":
             print("\nYou told them to scroll down...\n(status -10) (respect +10)")
-            statuses = [status-10, respect+10]
+            statuses = [status[0]-10, respect[0]+10]
         elif choice == "2":
             print("\nYou ignored it!!!\n(status -20) (respect +15)")
-            statuses = [status-20, respect+15]
+            statuses = [status[0]-20, respect[0]+15]
         elif choice == "3":
             print("\nYou blocked that website!!!\n(status +15) (respect -10)")
-            statuses = [status+15, respect-10]
+            statuses = [status[0]+15, respect[0]-10]
         elif choice == "4":
             ascii.mccuen("instinct")
             print("He used the chewbacca defence...\nYou were forced to aquit...")
             print("(status -25)\n(respect - 25)")
-            statuses = [status-25, respect-25]
+            statuses = [status[0]-25, respect[0]-25]
         input("\npress enter to continue...\n")
     elif event == "roblox":
         print("The Students have been playing Roblox in class!\n What do you do?")
@@ -297,10 +297,10 @@ def room_251(status, respect, event):
             choice = input("\n")
         if choice == "1":
             print("\nYou told them to be on the A switch...\n(status -10) (respect +0)")
-            statuses = [status-10, respect+0]
+            statuses = [status[0]-10, respect[0]+0]
         elif choice == "2":
             print("\nYou wiped all the computers!!!\n(status -15) (respect -20)")
-            statuses = [status-15, respect-20]
+            statuses = [status[0]-15, respect[0]-20]
         elif choice == "3":
             print("\nYou blocked that website!!!\n(status +15) (respect -10)")
             if "\"concerning\" letter from student" not in inventory:
@@ -308,7 +308,7 @@ def room_251(status, respect, event):
                     input("\npress enter to continue...\n")
                     inventory.append("\"concerning\" letter from student")
                     print("You recieved a...concerning...letter from a student after you blocked roblox!!!")
-            statuses = [status+15, respect-10]
+            statuses = [status[0]+15, respect[0]-10]
         elif choice == "4":
             print("""Dear Russel McCuen,
 
@@ -318,7 +318,7 @@ distractions, finding a balance that aligns with our objectives is key.
 Best regards,
 [Your Name]\n""")
             print("(status -25)\n(respect +20)")
-            statuses = [status-10, respect+5]
+            statuses = [status[0]-10, respect[0]+5]
         input("\npress enter to continue...\n")
     elif event == "food":
         print("The Students have been eating food in class!\n What do you do?")
@@ -339,18 +339,18 @@ Best regards,
             choice = input("\n")
         if choice == "1":
             print("\nYou ate all their food!!! WHYYYY!!!\n(status -15) (respect -25)")
-            statuses = [status - 3, respect - 15]
+            statuses = [status[0] - 3, respect[0] - 15]
         elif choice == "3":
             print("\nYou reported them to WECIB!!! \n(WECIB does not care, "
                   "\"That's Wake Tech's problem...\")\n(status +5) (respect -2)")
-            statuses = [status + 5, respect - 2]
+            statuses = [status[0] + 5, respect[0] - 2]
         elif choice == "2":
             print("\nYou reported them to Wake Tech!!!\n(Wake Tech banished them to the shadow realm)\n(status +10) (respect -10)")
-            statuses = [status + 10, respect - 10]
+            statuses = [status[0] + 10, respect[0] - 10]
         elif choice == "4":
             print("I'm not a narc!!!\n")
             print("(status -20)\n(respect +20)")
-            statuses = [status - 10, respect + 5]
+            statuses = [status[0] - 10, respect[0] + 5]
         input("\npress enter to continue...\n")
         if random.randint(0, 100) < 50:
             inventory.append("napkins")
@@ -526,6 +526,61 @@ def check_computers(major_issue, issue_list):
                   " Cutomer service commented on how much traffic\nthere was to OpenAI. I checked and most of the bandwidth on the "
                   "network being used for ChatGPT,\ntypically I would not care but this is an AI model possibly being used"
                   " to cheat\nI need to do something... or do I?\n")
+            input("Press enter to continue...")
+            return "chat gpt"
+    elif major_issue == "none":
+        randomly_selected_minor_issue = random.choice(issue_list)
+        if random.randint(1, 100) < 33 or randomly_selected_minor_issue == "food":
+            print(
+                "\nYou did not catch anything while monitoring the computers...\n")
+            input("Press enter to continue...")
+        elif randomly_selected_minor_issue == "bitcoin":
+            print(
+                "\nSoon after logging onto the computer to monitor the computers, You caught\n"
+                "many users pushing their computers with cost heavy Bitcoin software!!!\n")
+            input("Press enter to continue...")
+            return "bitcoin"
+        elif randomly_selected_minor_issue == "roblox":
+            print(
+                "\nSoon after logging onto the computer to monitor the computers, you caught a bunch\n"
+                "of students playing Roblox in the middle of a lecture!\n")
+            input("Press enter to continue...")
+            return "roblox"
+        elif randomly_selected_minor_issue == "chat gpt":
+            print(
+                "\nSoon after logging onto the computer to monitor the computers, you caught\n"
+                "many students using ChatGPT to cheat!")
+            input("Press enter to continue...")
+            return "chat gpt"
+    elif major_issue == "slow wifi":
+        print("FIX THE WIFI!!\nUnplug the router and plug it back in...")
+        print("""
+        \n===<|B|""")
+        input("")
+        print("""
+                \n===<|=  B|""")
+        input("")
+        print("""
+                \n===<|B|""")
+        randomly_selected_minor_issue = random.choice(issue_list)
+        if random.randint(1, 100) < 33 or randomly_selected_minor_issue == "food":
+            pass
+        elif randomly_selected_minor_issue == "bitcoin":
+            print(
+                "\nSoon after the internet went back up, You caught\n"
+                "many users pushing their computers with cost heavy Bitcoin software!!!\n")
+            input("Press enter to continue...")
+            return "bitcoin"
+        elif randomly_selected_minor_issue == "roblox":
+            print(
+                "\nSoon after the internet went back up, you caught a bunch\n"
+                "of students playing Roblox in the middle of a lecture!\n")
+            input("Press enter to continue...")
+            return "roblox"
+        elif randomly_selected_minor_issue == "chat gpt":
+            print(
+                "\nSoon after the server went back up, you caught\n"
+                "many students using ChatGPT to cheat!")
             input("Press enter to continue...")
             return "chat gpt"
 

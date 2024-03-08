@@ -3,8 +3,8 @@
 import random
 import ascii
 import Room_251
-respect_level = 50
-status_level = 50
+respect_level = [50]
+status_level = [50]
 inventory = []
 
 
@@ -18,8 +18,8 @@ def rand_choice(lower, upper, chance):
 
 def bitcoin(respect, status): # Dillion
     new_statuses = Room_251.room_251(status, respect, "bitcoin")
-    status = new_statuses[0]
-    respect = new_statuses[1]
+    status_level[0] = new_statuses[0]
+    respect_level[0] = new_statuses[1]
     print("Status:", new_statuses[0])
     print("Respect:", new_statuses[1])
     print("Inventory:")
@@ -40,8 +40,8 @@ def chatgpt(respect, status): # Dillion
     else:
         for item in range(len(inventory)):
             print(" -", inventory[item - 1])
-    status = new_statuses[0]
-    respect = new_statuses[1]
+    status_level[0] = new_statuses[0]
+    respect_level[0] = new_statuses[1]
     new_statuses.clear()
 
 def talk_mccuen():
@@ -57,8 +57,8 @@ def roblox(respect, status): # Dillion
     else:
         for item in range(len(inventory)):
             print(" -", inventory[item - 1])
-    status = new_statuses[0]
-    respect = new_statuses[1]
+    status_level[0] = new_statuses[0]
+    respect_level[0] = new_statuses[1]
     new_statuses.clear()
 
 
@@ -72,8 +72,8 @@ def food(respect, status): # Dillion
     else:
         for item in range(len(inventory)):
             print(" -", inventory[item - 1])
-    status = new_statuses[0]
-    respect = new_statuses[1]
+    status_level[0] = new_statuses[0]
+    respect_level[0] = new_statuses[1]
     new_statuses.clear()
 
 
@@ -124,7 +124,7 @@ def software_unaccess(respect, status):
 
 
 def slow_wifi(respect, status):
-    pass
+    minor issueRoom_251.check_computers("slow wifi", room_251)
 
 
 def servers_down(respect, status):
@@ -150,8 +150,12 @@ def online_textbook(respect, status):
 def wiped_hard_drives(respect, status):
     pass
 
+def monitor_computers():
+    minor_issue = Room_251.check_computers("none", room_251)
+
 
 issues = ["software_unaccess", "slow_wifi", "servers_down", "online_textbook",
           "wiped_hard_drives"]
 
+# software_unaccess(respect_level, status_level)
 # software_unaccess(respect_level, status_level)
