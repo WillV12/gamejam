@@ -1,25 +1,6 @@
-respect_level= 50
-# def spill_coffee(respect):
-#     print (f"Respect level: {respect}:")
-#     print("You walk into the server room and realize someone spilled a cup of hot coffee all over the server racks."
-#           "")
-#
-# spill_coffee(respect_level)
-#from variables import spill_coffee, burn, upgrade
 import random
-# def wire_unplug_challenge():
-#     tries = 0
-#     wires = [1,2,3,4,5,6]
-#     print ("Let's unplug some wires!"
-#            "\nChoose wire number to unplug (1-6)")
-#     while tries < 5:
-#         wire = int(input("Wire: "))
-#         if wire not in wires:
-#             print ("Not one of the wires.")
-#             wire = input("Wire: ")
-#         wires.remove(wire)
-#
-#         tries +=1
+respect_level= 50
+
 def spill_coffee(respect):
     options = [1, 2, 3]
     print("There is some coffee spilled all over the servers floor. Choose what you want to do:"
@@ -69,6 +50,7 @@ def burn(respect):
         print(f"Respect Level: {respect}")
     else:
         choice = int(input("Option: "))
+
 def wire_unplug_challenge(respect):
     tries = 0
     wires = [1,2,3,4,5,6]
@@ -93,6 +75,7 @@ def wire_unplug_challenge(respect):
         else:
             tries +=1
     print("Maybe unplugging those wires was not the way to bring the server back. ")
+
 def server():
     options = [1, 2, 3]
     print("You have entered the server room."
@@ -126,5 +109,3 @@ def server():
         else:
             choice = int(input("Option: "))
 
-
-server()

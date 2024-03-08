@@ -59,7 +59,29 @@ def burn(respect):
     else:
         choice = int(input("Option: "))
 def upgrade(respect):
-    pass
+    options = [1, 2, 3]
+    print("Apparently, someone also burned one of the power outlets here in the server. What do you do?"
+          "\n1. Call the maintenance dude"
+          "\n2. Pull up video footage and snitch"
+          "\n3. Burn another one")
+    choice = int(input("Option: "))
+    while choice not in options:
+        print("Make sure it is just the number of one of the options above.")
+        choice = int(input("Option: "))
+    if choice == 1:
+        print("That is really kind. Good Job!")
+        respect += 25
+        print(f"Respect Level: {respect}")
+    elif choice == 2:
+        print("Good job for trying to do the right thing, but snitching? That's mean.")
+        respect -= 10
+        print(f"Respect Level: {respect}")
+    elif choice == 3:
+        print("An employee should try to resolve issues and not make it even worse. ")
+        respect -= 25
+        print(f"Respect Level: {respect}")
+    else:
+        choice = int(input("Option: "))
 def admin_access():
     pass
 def office_ransack():
