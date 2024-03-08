@@ -5,9 +5,9 @@ import ascii
 import random
 
 # I just used these variables for testing
-inventory = []
-"""Status = int(input("status"))
-Respect = int(input("respect"))
+"""inventory = []
+Status = [int(input("status"))]
+Respect = [int(input("respect"))]
 Event = input("event").lower()"""
 
 
@@ -585,6 +585,108 @@ def check_computers(major_issue, issue_list):
             return "chat gpt"
 
 
+def office_mini_prompts(status, respect, event):
+    statuses = [status, respect]
+    print("You are in the office now.")
+    print("Status:", status)
+    print("Respect:", respect)
+
+    if event == "admin access":
+        print("The Students encountered admin access!\n What do you do?")
+        print("""
+                        1. send students to office
+                        2. ignore it
+                        3. give them admin access
+                        4. fix it after school""")
+        choice = input("\n")
+        while choice not in ["1", "2", "3", "4"]:
+            print("Please make a choice...")
+            print("The Students have been mining bitcoin in class!\n What do you do?")
+            print("""
+                1. send students to office
+                2. ignore it
+                3. give them admin access
+                4. fix it after school""")
+            choice = input("\n")
+        if choice == "1":
+            print("\nYou sent the student to the office...\n(status -15) (respect -5)")
+            statuses = [status[0] - 15, respect[0] - 5]
+        elif choice == "2":
+            print("\nYou ignored it!!!\n(status -20) (respect -15)")
+            statuses = [status[0] - 20, respect[0] - 15]
+        elif choice == "3":
+            print("\nYou gave them admin access!!!\nThey are doing stuff they're not supposed to do\n(status -15) (respect +20)")
+            statuses = [status[0] - 15, respect[0] + 20]
+        elif choice == "4":
+            print("You fixed the issue!")
+            print("(status +10)\n(respect +15)")
+            statuses = [status[0] - 25, respect[0] - 25]
+        input("\npress enter to continue...\n")
+    elif event == "students ransack office":
+        print("The Students have Ransacked your office!!\n What do you do?")
+        print("""
+            1. tell them to scroll down
+            2. cry
+            3. Beat them up!
+            4. Call the police""")
+        choice = input("\n")
+        while choice not in ["1", "2", "3", "4"]:
+            print("Please make a choice...")
+            print("The Students have been using ChatGPT to cheat in class!\n What do you do?")
+            print("""
+            1. tell them to scroll down
+            2. cry
+            3. Beat them up!
+            4. Call the police""")
+            choice = input("\n")
+        if choice == "1":
+            print("\nYou told them to scroll down...\n(status -10) (respect -20)")
+            statuses = [status[0] - 10, respect[0] - 20]
+        elif choice == "2":
+            print("\nYou Cried about it!!!\n(status -2) (respect -15)")
+            statuses = [status[0] - 2, respect[0] - 15]
+        elif choice == "3":
+            print("\nYou tried to beat them up!!!\nYou lost!!!\n(status -25) (respect - 5)")
+            statuses = [status[0] - 25, respect[0] - 5]
+        elif choice == "4":
+            print("you called the police!\nthe kids got arrested!")
+            print("(status +15)\n(respect - 10)")
+            statuses = [status[0] + 15, respect[0] - 10]
+        input("\npress enter to continue...\n")
+    elif event == "lan school issue":
+        print("McCuen has an issue with lanschool\n What do you do?")
+        print("""
+            1. tell them to swap to A on the switch
+            2. Wipe all the computers
+            3. wipe McCuens computer
+            4. fix the computer over the weekend""")
+        choice = input("\n")
+        while choice not in ["1", "2", "3", "4"]:
+            print("Please make a choice...")
+            print("McCuen has an issue with lanschool!\n What do you do?")
+            print("""
+            1. tell them to swap to A on the switch
+            2. Wipe all the computers
+            3. wipe McCuens computer
+            4. fix the computer over the weekend""")
+            choice = input("\n")
+        if choice == "1":
+            print("\nYou told them to be on the A switch...\n(status -2) (respect -5)")
+            statuses = [status[0] - 2, respect[0] + 5]
+        elif choice == "2":
+            print("\nYou wiped all the computers!!!\n(status -10) (respect -20)")
+            statuses = [status[0] - 10, respect[0] - 20]
+        elif choice == "3":
+            ascii.mccuen("instinct")
+            print("\nYou wiped McCuen's computer!!!\n(status -25) (respect +20)")
+            statuses = [status[0] - 25, respect[0] + 20]
+        elif choice == "4":
+            print("""\nYou fixed the computer over the weekend...\n""")
+            print("(status +5)\n(respect +5)")
+            statuses = [status[0] +5, respect[0] + 5]
+        input("\npress enter to continue...\n")
+
+# office_mini_prompts(Status, Respect, Event)
 '''new_statuses = room_251(status, respect, Event)
 print("Status:", new_statuses[0])
 print("Respect:", new_statuses[1])
