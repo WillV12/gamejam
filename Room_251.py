@@ -369,7 +369,7 @@ Best regards,
 
 #This command take the major issue as input like: Students cant access software/online books
 # returns "bitcoin", "roblox", "food", "chat gpt"
-def check_computers(major_issue):
+def check_computers(major_issue, issue_list):
     # simulate forgetting username and password
     forget = random.choice(["nothing", "username", "password", "both"])
     if forget == "nothing":
@@ -424,12 +424,14 @@ def check_computers(major_issue):
                 for x in range(len(usernames)):
                     print(f" - {usernames[x - 1]}")
             else:
+                print("\nCORRECT USERNAME")
                 print(" -", guess1)
             if not correctly_guessed_both_checker[1]:
                 print("\nPASSWORDS:")
                 for x in range(len(password)):
                     print(f" - {password[x - 1]}")
             else:
+                print("\nCORRECT PASSWORD:")
                 print(" -", guess2)
             if not correctly_guessed_both_checker[0]:
                 guess1 = input("\n(type the full username, not just it's number on the list)\nUsername: ")
@@ -463,64 +465,72 @@ def check_computers(major_issue):
                 print("Added to inventory: sticky note with username and password.")
                 break
     if major_issue == "can\'t access software":
-        randomly_selected_minor_issue = random.choice(["bitcoin", "roblox", "food", "chat gpt"])
+        randomly_selected_minor_issue = random.choice(issue_list)
         if randomly_selected_minor_issue == "bitcoin":
             print("\nA few hours later...\n")
-            print("You fixed the problem, but while you were at the computer, you noticed the server fans operating "
-                  "at over 100%, upon further inspection of the computer you realize that students have been mining "
-                  "bitcoin using wake tech property!\n")
+            print("You fixed the problem, but while you were at the computer, you\nnoticed the server fans operating "
+                  "at over 100%, upon further inspection of\nthe computer you realize that students have been mining "
+                  "bitcoin using\nwake tech property!\n")
+            input("Press enter to continue...")
             return "bitcoin"
         elif randomly_selected_minor_issue == "roblox":
             print("\nA few hours later...\n")
-            print("You fixed the problem, but while you were at the computer, you noticed that many of the students had"
-                  "an application called \"Roblox\" installed on their computers. From your knowlege it is a video game..."
+            print("You fixed the problem, but while you were at the computer,\nyou noticed that many of the students had "
+                  "an application\ncalled \"Roblox\" installed on their computers.\nFrom your knowlege it is a video game...\n"
                   "INSTALLED ON WAKE TECH PROPERTY?!?!\n")
+            input("Press enter to continue...")
             return "roblox"
         elif randomly_selected_minor_issue == "food":
             print("\nA few hours later...\n")
-            print("You fixed the problem, but while you were at the computer, you noticed crumbs, grease, sprinkles, and "
-                  "nearly every other kind of food residue imaginable baked into the keyboard, mouse, monitor, and even"
+            print("You fixed the problem, but while you were at the computer, you noticed\ncrumbs, grease, sprinkles, and "
+                  "nearly every other kind\nof food residue imaginable baked into the keyboard,\nmouse, monitor, and even"
                   "somehow the motherboard...\n")
+            input("Press enter to continue...")
             return "food"
         elif randomly_selected_minor_issue == "chat gpt":
             print("\nA few hours later...\n")
-            print("You fixed the problem, but while you were at the computer, you noticed most of the bandwidth on the "
-                  "network being used for ChatGPT, typically I would not care but this is an AI model possibly being used"
-                  "to cheat\n I need to do something... or do I?")
+            print("You fixed the problem, but while you were at the computer, you\nnoticed most of the bandwidth on the "
+                  "network being used for ChatGPT,\ntypically I would not care but this is an AI model\npossibly being used"
+                  " to cheat\nI need to do something... or do I?\n")
+            input("Press enter to continue...")
             return "chat gpt"
     elif major_issue == "can\'t access online textbook":
-        randomly_selected_minor_issue = random.choice(["bitcoin", "roblox", "food", "chat gpt"])
+        randomly_selected_minor_issue = random.choice(issue_list)
         if randomly_selected_minor_issue == "bitcoin":
             print("\nA few hours later...\n")
-            print("You were calling customer service all day, but you finally got the students their textbooks. However,"
-                  " Cutomer service commented on how loud the servers were. I checked and the server fans were "
-                  "operating at over 100%, upon further inspection of the computer you realize that students have been"
-                  " mining bitcoin using wake tech property!\n")
+            print("You were calling customer service all day, but you finally got\nthe students their textbooks. However,"
+                  " Cutomer service commented\non how loud the servers were.\nI checked and the server fans were "
+                  "operating at over 100%, upon\nfurther inspection of the computer you realize that students have been"
+                  " mining\nbitcoin using wake tech property!\n")
+            input("Press enter to continue...")
             return "bitcoin"
         elif randomly_selected_minor_issue == "roblox":
             print("\nA few hours later...\n")
-            print("You were calling customer service all day, but you finally got the students their textbooks. However,"
-                  " Cutomer service commented on how much traffic there was to Roblox.com. I checked and the many of "
-                  "the students had an application called \"Roblox\" installed on their computers. From your knowlege "
-                  "it is a video game...INSTALLED ON WAKE TECH PROPERTY?!?!\n")
+            print("You were calling customer service all day, but you finally got\nthe students their textbooks. However,"
+                  " Cutomer\nservice commented on how much traffic there was to\nRoblox.com. I checked and the many of "
+                  "the students had\nan application called \"Roblox\" installed on their computers. From your\nknowlege "
+                  "it is a video game...\nINSTALLED ON WAKE TECH PROPERTY?!?!\n")
+            input("Press enter to continue...")
             return "roblox"
         elif randomly_selected_minor_issue == "food":
             print("\nA few hours later...\n")
-            print("You were calling customer service all day, but you finally got the students their textbooks. However,"
-                  " Cutomer service commented on how delicious the computers looked. I checked and there were crumbs, grease,"
-                  " sprinkles, and nearly every other kind of food residue imaginable baked into the keyboard, mouse,"
+            print("You were calling customer service all day, but you finally\ngot the students their textbooks. However,"
+                  " Cutomer service commented\non how delicious the computers looked. I checked and there were crumbs, grease,"
+                  " sprinkles,\nand nearly every other kind of food residue imaginable baked into the\nkeyboard, mouse,"
                   " monitor, and even somehow the motherboard...\n")
+            input("Press enter to continue...")
             return "food"
         elif randomly_selected_minor_issue == "chat gpt":
             print("\nA few hours later...\n")
-            print("You were calling customer service all day, but you finally got the students their textbooks. However,"
-                  " Cutomer service commented on how much traffic there was to OpenAI. I checked and most of the bandwidth on the "
-                  "network being used for ChatGPT, typically I would not care but this is an AI model possibly being used"
-                  "to cheat\n I need to do something... or do I?")
+            print("You were calling customer service all day, but you finally got the\nstudents their textbooks. However,"
+                  " Cutomer service commented on how much traffic\nthere was to OpenAI. I checked and most of the bandwidth on the "
+                  "network being used for ChatGPT,\ntypically I would not care but this is an AI model possibly being used"
+                  " to cheat\nI need to do something... or do I?\n")
+            input("Press enter to continue...")
             return "chat gpt"
 
 
-"""new_statuses = room_251(Status, Respect, Event)
+'''new_statuses = room_251(status, respect, Event)
 print("Status:", new_statuses[0])
 print("Respect:", new_statuses[1])
 print("Inventory:")
@@ -531,6 +541,6 @@ else:
         print(" -", inventory[item-1])
 status = new_statuses[0]
 respect = new_statuses[1]
-new_statuses.clear()"""
+new_statuses.clear()
 
-check_computers()
+check_computers()'''
