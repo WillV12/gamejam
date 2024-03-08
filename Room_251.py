@@ -356,12 +356,12 @@ Best regards,
             inventory.append("napkins")
             print("you found napkins!")
             input("\npress enter to continue...\n")
-
-    if "ceiling beam that almost hit nuno on the head..." not in inventory:
-        if random.randint(1, 4) == 1:
-            inventory.append("ceiling beam that almost hit nuno on the head...")
-            print("\nYou found a ceiling beam that almost hit nuno on the head!!!\nceiling beam that almost hit nuno on the head... added to inventory.\n")
-            input("\npress enter to continue...\n")
+    if event != "talk":
+        if "ceiling beam that almost hit nuno on the head..." not in inventory:
+            if random.randint(1, 4) == 1:
+                inventory.append("ceiling beam that almost hit nuno on the head...")
+                print("\nYou found a ceiling beam that almost hit nuno on the head!!!\nceiling beam that almost hit nuno on the head... added to inventory.\n")
+                input("\npress enter to continue...\n")
 
     print("You leave 251...\n\n")
     return statuses

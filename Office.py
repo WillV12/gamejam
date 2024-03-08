@@ -1,6 +1,5 @@
 import variables
 
-
 def office():
     print("You enter your office...\nDecide what to do:")
     while True:
@@ -23,6 +22,18 @@ def office():
                 print("\n*sigh* Teams has crashed...\n")
                 choice_correct = False
             print("You logged into teams")
+            while True:
+                print("\n1. Talk to McCuen\n2. Leave\n")
+                teams_choice = input("")
+                while teams_choice != "1" and teams_choice != "2":
+                    print("Please enter a valid choice...\n")
+                    print("\n1. Talk to McCuen\n2. Leave\n")
+                    teams_choice = input("")
+                if teams_choice == "2":
+                    print("\nYou logged off teams...\n")
+                    break
+                elif teams_choice == "1":
+                    variables.talk_mccuen()
         if choice_correct is True:
             break
     return choice

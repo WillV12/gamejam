@@ -44,6 +44,8 @@ def chatgpt(respect, status): # Dillion
     respect = new_statuses[1]
     new_statuses.clear()
 
+def talk_mccuen():
+    Room_251.room_251(status_level, respect_level, "talk")
 
 def roblox(respect, status): # Dillion
     new_statuses = Room_251.room_251(status, respect, "roblox")
@@ -99,9 +101,9 @@ def lanschool(respect, status): # Will
     pass
 
 
-office = [admin_access(respect_level,status_level), office_ransack(respect_level,status_level), lanschool(respect_level,status_level)]
+office = ["admin access", "office ransack", "lanschool"]
 room_251 = ["chat gpt", "roblox", "food", "bitcoin"]
-server = [spill_coffee(respect_level,status_level), burn(respect_level,status_level), upgrade(respect_level,status_level)]
+server = ["spill coffee", "burn", "upgrade"]
 
 
 def software_unaccess(respect, status):
