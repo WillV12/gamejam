@@ -39,6 +39,3 @@ def office():
         if choice_correct is True:
             break
     return choice
-
-
-office()
