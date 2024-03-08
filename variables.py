@@ -90,15 +90,48 @@ def upgrade(respect, status): # Carol
 
 
 def admin_access(respect, status): # Will
-    print("")
+    new_statuses = Room_251.office_mini_prompts(status, respect, "admin access")
+    print("Status:", new_statuses[0])
+    print("Respect:", new_statuses[1])
+    print("Inventory:")
+    if len(inventory) == 0:
+        print("empty...")
+    else:
+        for item in range(len(inventory)):
+            print(" -", inventory[item - 1])
+    status_level[0] = new_statuses[0]
+    respect_level[0] = new_statuses[1]
+    new_statuses.clear()
 
 
 def office_ransack(respect, status): # Will
-    pass
+    new_statuses = Room_251.office_mini_prompts(status, respect, "students ransack office")
+    print("Status:", new_statuses[0])
+    print("Respect:", new_statuses[1])
+    print("Inventory:")
+    if len(inventory) == 0:
+        print("empty...")
+    else:
+        for item in range(len(inventory)):
+            print(" -", inventory[item - 1])
+    status_level[0] = new_statuses[0]
+    respect_level[0] = new_statuses[1]
+    new_statuses.clear()
 
 
 def lanschool(respect, status): # Will
-    pass
+    new_statuses = Room_251.office_mini_prompts(status, respect, "lan school issue")
+    print("Status:", new_statuses[0])
+    print("Respect:", new_statuses[1])
+    print("Inventory:")
+    if len(inventory) == 0:
+        print("empty...")
+    else:
+        for item in range(len(inventory)):
+            print(" -", inventory[item - 1])
+    status_level[0] = new_statuses[0]
+    respect_level[0] = new_statuses[1]
+    new_statuses.clear()
 
 
 office = ["admin access", "office ransack", "lanschool"]
@@ -124,7 +157,7 @@ def software_unaccess(respect, status):
 
 
 def slow_wifi(respect, status):
-    minor_issue = Room_251.check_computers("slow wifi", room_251)
+    pass
 
 
 def servers_down(respect, status):
@@ -159,3 +192,4 @@ issues = ["software_unaccess", "slow_wifi", "servers_down", "online_textbook",
 
 # software_unaccess(respect_level, status_level)
 # software_unaccess(respect_level, status_level)
+
