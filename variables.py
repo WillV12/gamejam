@@ -124,7 +124,7 @@ def software_unaccess(respect, status):
 
 
 def slow_wifi(respect, status):
-    minor issueRoom_251.check_computers("slow wifi", room_251)
+    minor_issue = Room_251.check_computers("slow wifi", room_251)
 
 
 def servers_down(respect, status):
