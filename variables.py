@@ -1,9 +1,12 @@
-# below 30, above 70, danger zone
+# status below 30, respect above 70, danger zone
 # server
 import random
+import ascii
 import Room_251
-respect_level = 0
-status_level = 0
+respect_level = 50
+status_level = 50
+inventory = []
+
 
 def rand_choice(lower, upper, chance):
     success = True
@@ -14,19 +17,43 @@ def rand_choice(lower, upper, chance):
 
 
 def bitcoin(respect, status): # Dillion
-    new_statuses = Room_251.room_251(50, 50, event)
+    new_statuses = Room_251.room_251(status, respect, "bitcoin")
     print("Status:", new_statuses[0])
     print("Respect:", new_statuses[1])
     print("Inventory:", inventory)
     status = new_statuses[0]
     respect = new_statuses[1]
     new_statuses.clear()
+
+
 def chatgpt(respect, status): # Dillion
-    pass
+    new_statuses = Room_251.room_251(status, respect, "chat gpt")
+    print("Status:", new_statuses[0])
+    print("Respect:", new_statuses[1])
+    print("Inventory:", inventory)
+    status = new_statuses[0]
+    respect = new_statuses[1]
+    new_statuses.clear()
+
+
 def roblox(respect, status): # Dillion
-    pass
+    new_statuses = Room_251.room_251(status, respect, "roblox")
+    print("Status:", new_statuses[0])
+    print("Respect:", new_statuses[1])
+    print("Inventory:", inventory)
+    status = new_statuses[0]
+    respect = new_statuses[1]
+    new_statuses.clear()
+
+
 def food(respect, status): # Dillion
-    pass
+    new_statuses = Room_251.room_251(status, respect, "food")
+    print("Status:", new_statuses[0])
+    print("Respect:", new_statuses[1])
+    print("Inventory:", inventory)
+    status = new_statuses[0]
+    respect = new_statuses[1]
+    new_statuses.clear()
 def spill_coffee(respect, status): # Carol
     pass
 def burn(respect, status): # Carol
